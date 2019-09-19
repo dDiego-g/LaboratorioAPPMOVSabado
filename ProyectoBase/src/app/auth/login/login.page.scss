@@ -1,0 +1,34 @@
+ion-item{
+    --background: ##15D0B3;
+    --color: #fff;
+    --border-color: #F4F3EF;
+}
+ion-button{
+    font-weight: bold;
+}
+:host {
+    .item-interactive.ion-invalid{
+     --highlight-background: white !important;
+   }
+   .item-interactive.ion-valid{
+     --highlight-background: white !important;
+   }
+ }
+h1{
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+}
+h6{
+    color: white;
+    font-weight: bold;
+}
+a{
+    color: #fff;
+}
+.fondo {
+    background-color: #15D0B3;
+}
+p{
+    color: #fff;
+}
