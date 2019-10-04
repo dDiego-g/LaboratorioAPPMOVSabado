@@ -1,11 +1,5 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>registrar</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content  class="fondo" color="#15D0B3">
-  <form  #form="ngForm" [formGroup]="registerForm" (ngSubmit)="registrar()">
+  <form  [formGroup]="registrarForm" (ngSubmit)="registrar()">
     <ion-grid>
       <ion-row color="primary" justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
@@ -15,19 +9,19 @@
           <div padding>
             <ion-item>
               <ion-input formControlName="nombre" type="text" placeholder="Nombre" ngModel required></ion-input>
-              <div color="error" *ngIf="f.nombre.errors"></div>
+              <div color="error" *ngIf="f.nombre.errors">*</div>
             </ion-item>
             <ion-item>
               <ion-input formControlName="correo" type="email" placeholder="Correo" ngModel required></ion-input>
-              <div color="error" *ngIf="f.correo.errors"></div>
+              <div color="error" *ngIf="f.correo.errors">*</div>
             </ion-item>
             <ion-item>
               <ion-input formControlName="contrasena" type="password" placeholder="Contraseña" ngModel required></ion-input>
-              <div color="error" *ngIf="f.contrasena.errors"></div>
+              <div color="error" *ngIf="f.contrasena.errors">*</div>
             </ion-item>
             <ion-item>
               <ion-input formControlName="confirmacionContrasena" type="password" placeholder="Repetir contraseña" ngModel required></ion-input>
-              <div color="error" *ngIf="f.confirmacionContrasena.errors"></div>
+              <div color="error" *ngIf="f.confirmacionContrasena.errors">*</div>
             </ion-item>
           </div>
           <div padding>

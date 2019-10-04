@@ -5,12 +5,11 @@ import { RegistrarPage } from './auth/registrar/registrar.page';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./auth/login/login.module').then(m => m.LoginPageModule)
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   { path: 'registro', component: RegistrarPage },
-  { path: 'registrar', component: RegistrarPage },
+  { path: 'registrar', component: RegistrarPage  },
   { path: 'login', loadChildren: './auth/login/login.module#LoginPageModule' }
-
 ];
 @NgModule({
   imports: [
