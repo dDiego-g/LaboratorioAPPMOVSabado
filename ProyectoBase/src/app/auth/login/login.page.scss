@@ -1,3 +1,4 @@
+  
 ion-item{
     --background: ##15D0B3;
     --color: #fff;
@@ -5,6 +6,10 @@ ion-item{
 }
 ion-button{
     font-weight: bold;
+}
+.divButton {
+    padding-top: 20px;
+    text-align: center;
 }
 :host {
     .item-interactive.ion-invalid{
@@ -19,7 +24,7 @@ h1{
     font-weight: bold;
     font-size: 70px;
 }
-h6{
+h4{
     color: white;
     font-weight: bold;
 }
