@@ -1,0 +1,57 @@
+.divButton{
+    width: 50%;
+    float: left;
+    justify-content: center;
+    text-align: center;
+    --color: #ffff
+}
+
+.divCaja {
+    --background: rgb(0, 180, 153);
+    --color: rgb(0, 0, 0);
+}
+
+ion-item{
+    --background: #15D0B3;
+    --color: #fff;
+}
+
+ion-button{
+    --background: #fff;
+    --color: #15D0B3;
+}
+
+ion-content{
+    --background: #15D0B3;
+    --color: #fff;
+}
+
+ion-row{
+    --background: #15D0B3;
+    --color: #fff;
+}
+
+ion-toolbar {
+    --background: #15D0B3;
+    --color: #fff;
+}
+
+ion-content {
+    --background: #15D0B3;
+    --color: #fff;
+}
+
+ion-label{
+    --background: #15D0B3;
+    --color: rgb(0, 0, 0);  
+}
+
+ion-select{
+    --background: rgb(255, 255, 255);
+    --color: rgb(0, 0, 0);  
+}
+
+ion-card {
+    --background: rgb(255, 255, 255);
+    --color: rgb(0, 0, 0);  
+}

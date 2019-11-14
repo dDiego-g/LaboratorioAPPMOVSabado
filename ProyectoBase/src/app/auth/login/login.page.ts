@@ -1,11 +1,10 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegistrarService } from '../registrar/registrar.service';
 import { Usuario } from 'src/app/model/usuario';
 import { ModalController, AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { LoginService } from './loginService';
-import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
 
 @Component({
   selector: 'app-login',
@@ -17,41 +16,39 @@ export class LoginPage implements OnInit {
   submitted = false;
   usuario: Usuario;
   constructor(private formBuilder: FormBuilder,
-              private loginService: LoginService,
-              private alertController: AlertController,
-              private router: Router,
-              @Inject(LOCAL_STORAGE) private storage: StorageService) {
+    private loginService: LoginService,
+    private alertController: AlertController,
+    private router: Router) {
 
-              this.loginForm = this.formBuilder.group({
-                correo: ['', [Validators.required, Validators.email]],
-                contrasena: ['', [Validators.required, Validators.minLength(6)]]
-                });
+
+    this.loginForm = this.formBuilder.group({
+      correo: ['', [Validators.required, Validators.email]],
+      contrasena: ['', [Validators.required, Validators.minLength(6)]]
+    });
   }
 
   ngOnInit() {
   }
 
-  login(){
-      console.log(this.loginForm.valid);
-      this.usuario = new Usuario();
-      this.usuario.correo = this.loginForm.controls.correo.value;
-      this.usuario.contrasena = this.loginForm.controls.contrasena.value;
-      this.loginService.Login(this.usuario).subscribe(
-        data => {
-          this.storage.set('correo', this.usuario.correo);
-          console.log(this.storage.get('correo'));
-          this.loginCorrecto();
-        },
-        error => {
-          this.error(error.error.mensaje)
-        }
-      );
+  login() {
+    console.log(this.loginForm.valid);
+    this.usuario = new Usuario();
+    this.usuario.correo = this.loginForm.controls.correo.value;
+    this.usuario.contrasena = this.loginForm.controls.contrasena.value;
+    this.loginService.Login(this.usuario).subscribe(
+      value => {
+        this.loginCorrecto();
+      },
+      error => {
+        this.error(error.error.mensaje)
+      }
+    );
   }
 
   async loginCorrecto() {
     const alert = await this.alertController.create({
-      header: 'Finixer',
-      subHeader: '',
+      header: 'Alert',
+      subHeader: 'Finixer',
       message: 'Bienvenido a Finixer',
       buttons: [{
         text: 'Aceptar',
@@ -64,9 +61,9 @@ export class LoginPage implements OnInit {
     await alert.present();
   }
 
-  async error(error: string){
+  async error(error: string) {
     const alert = await this.alertController.create({
-      header: 'Finixer',
+      header: 'Alerta',
       subHeader: 'Error',
       message: error,
       buttons: [{

@@ -1,0 +1,71 @@
+ion-item{
+  --background: #15D0B3;
+  --color: #fff;
+  --border-color: white;
+}
+
+ion-input{
+  font-family: 'Nunito';
+  --placeholder-color: white; 
+  --placeholder-opacity: 100;
+
+}
+
+ion-toolbar {
+  --background: #15D0B3;
+  --color: #fff;
+}
+
+ion-content {
+  --background: #15D0B3;
+  --color: #fff;
+}
+
+ion-list {
+  --background: #15D0B3;
+  --color: #fff;
+}
+
+ion-button{
+  --background: white;
+  --opacity: 100;	
+  font-family: 'Nunito';
+  font-weight: 900;
+  color: #15D0B3;
+}
+
+
+
+div {
+  background-color: inherit;
+  border: 0px;
+}
+
+.icon-bigger {
+  font-size: 100px; //Preferred size here
+}
+
+.editButton {
+  padding-top: 40px;
+  text-align: center;
+}
+
+
+ion-card{
+  width: 100% !important;
+  --background: #15D0B3;
+  --color: #fff;
+}
+
+.cardItems{
+  --background: #15D0B3;
+  --color: #fff;
+}
+
+.Color1{
+  color: rgb(0, 255, 76);
+}
+
+.Color2{
+  color: rgb(255, 0, 0);
+}

@@ -11,20 +11,30 @@ ion-input{
 
 }
 
+ion-toolbar {
+    --background: #15D0B3;
+    --color: #fff;
+}
+
+ion-content {
+    --background: #15D0B3;
+    --color: #fff;
+}
+
+ion-list {
+    --background: #15D0B3;
+    --color: #fff;
+}
+
 ion-button{
     --background: white;
     --opacity: 100;	
     font-family: 'Nunito';
     font-weight: 900;
     color: #15D0B3;
-    font-weight: bold;
 }
 
-h3{
-    color: white;
-    font-weight: bold;
-    font-family: 'Nunito';
-}
+
 
 div {
     background-color: inherit;
@@ -43,9 +53,11 @@ div {
 
 ion-card{
     width: 100% !important;
+    --background: #15D0B3;
+    --color: #fff;
   }
 
 .cardItems{
-    color: #fff;
-    --background:  #fff;
+    --background: #15D0B3;
+    --color: #fff;
 }
